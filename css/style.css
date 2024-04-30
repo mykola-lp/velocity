@@ -1,0 +1,195 @@
+/*==============================================================
+  # General.
+==============================================================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #edeff2;
+  color: #6a859c;
+}
+
+/* --- Links. --- */
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Layout. --- */
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/*==============================================================
+  # Header (Menu navigation).
+==============================================================*/
+.header {
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.header .logo {
+  float: left;
+  padding: 1em 0;
+}
+
+.header .logo .name {
+  color: #69b9ff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+.header .menu {
+  float: right;
+}
+
+.menu li {
+  display: inline-block;
+  text-align: left;
+  padding: 1.25em;
+}
+
+.menu .menu-item {
+  color: #676770;
+}
+
+.menu a.active,
+.menu a:hover {
+  color: #0082f3;
+}
+
+/* --- Container for menu button --- */
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  float: right;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* --- Creating the menu button --- */
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #000000;
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  border-radius: 3px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+/* --- Hamburger Menu --- */
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0;
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background-color: #ffffff;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0;
+  transform: rotate(-45deg); /* transforms the hamburger icon into a cross  */
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-button-container {
+    display: block;
+    margin-top: 1.55em;
+  }
+
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 65px;
+    width: 100%;
+  }
+
+  #menu-toggle:checked ~ .menu ul {
+    display: block;
+  }
+
+  .menu ul > li {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+    width: 100%;
+    color: #000000;
+    background-color: #ffffff;
+  }
+
+  .menu ul > li:not(:last-child) {
+    border-bottom: 3px solid #eeeeee;
+  }
+}

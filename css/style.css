@@ -81,6 +81,47 @@ img {
   }
 }
 
+.row {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.row::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.row [class^="col"] {
+  float: left;
+  padding: 0 10px;
+}
+
+/* --- Grid Layout. --- */
+.col-1 { width: 8.33%; }
+.col-2 { width: 16.66%; }
+.col-3 { width: 25%; }
+.col-4 { width: 33.33%; }
+.col-5 { width: 41.66%; }
+.col-6 { width: 50%; }
+.col-7 { width: 58.33%; }
+.col-8 { width: 66.66%; }
+.col-9 { width: 75%; }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%; }
+
+@media (max-width: 768px) {
+  .row [class^="col"] {
+    float: none;
+    margin: 10px 0;
+  }
+
+  .col {
+    width: 100%;
+  }
+}
+
 /*==============================================================
   # Header (Menu navigation).
 ==============================================================*/
@@ -272,4 +313,82 @@ img {
 .banner .btn-learn-more:hover {
   border-color: #2e9dff;
   color: #2e9dff;
+}
+
+/*==============================================================
+  # Offer section (What We Do).
+==============================================================*/
+.offer {
+  padding: 80px 10px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.offer .title-group {
+  margin-bottom: 60px;
+}
+
+.title-group .heading,
+.title-group .subheading {
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title-group .heading {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #676770;
+  font-size: 30px;
+  text-align: center;
+  letter-spacing: 5px;
+}
+
+.title-group .subheading {
+  color: #8e8e9c;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.offer .white-box {
+  padding: 15px;
+  border: 1px solid #dcebf7;
+  border-radius: 5px;
+  background-color: #ffffff;
+  text-align: center;
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px)
+             scale3d(1, 1, 1)
+             rotateX(0deg)
+             rotateY(0deg)
+             rotateZ(0deg)
+             skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.white-box img {
+  display: block;
+  width: 35%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  background-color: #69b9ff;
+  box-shadow: 0 0 0 1px #2e9dff;
+}
+
+.white-box h3 {
+  color: #676770;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+}
+
+.white-box p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
 }

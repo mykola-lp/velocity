@@ -132,32 +132,32 @@
       <!-- Services END -->
 
       <!-- Tab BEGIN -->
-      <section class="tab">
+      <section class="tab" role="region" aria-label="Tab section">
         <div class="container">
           <h2 class="heading">Tab Section</h2>
-          <div class="subheading">
+          <div class="subheading" role="heading" aria-label="This is some text inside of a div block heading">
             This is some text inside of a div block.
           </div>
           <div class="tab-menu" role="tablist">
-            <div class="btn btn-tab active" onclick="openTab('tab-1')">Tab 1</div>
-            <div class="btn btn-tab" onclick="openTab('tab-2')">Tab 2</div>
-            <div class="btn btn-tab" onclick="openTab('tab-3')">Tab 3</div>
+            <div class="btn btn-tab active" role="tab" onclick="openTab('tab-1')">Tab 1</div>
+            <div class="btn btn-tab" role="tab" onclick="openTab('tab-2')">Tab 2</div>
+            <div class="btn btn-tab" role="tab" onclick="openTab('tab-3')">Tab 3</div>
           </div>
           <div class="tab-content">
             <div id="tab-1" class="content-item active">
-              <img src="img/tab-1.jpeg" alt="Tab Image One">
+              <img src="img/tab-1.jpeg" alt="Tab Image One" aria-label="Tab Image One">
               <h2>Heading 1</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. <br>Duis cursus, mi quis viverra ornare,
                 eros dolor interdum nulla, ut commodo diam libero vitae erat. <br>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
             </div>
             <div id="tab-2" class="content-item">
-              <img src="img/tab-2.jpeg" alt="Tab Image Two">
+              <img src="img/tab-2.jpeg" alt="Tab Image Two" aria-label="Tab Image Two">
               <h2>Heading 2</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. <br>Duis cursus, mi quis viverra ornare, eros
                 dolor interdum nulla, ut commodo diam libero vitae erat.<br>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
             </div>
             <div id="tab-3" class="content-item">
-              <img src="img/tab-3.jpeg" alt="Tab Image Three">
+              <img src="img/tab-3.jpeg" alt="Tab Image Three" aria-label="Tab Image Three">
               <h2>Heading 3</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. <br>Duis cursus, mi quis viverra ornare, eros
                 dolor interdum nulla, ut commodo diam libero vitae erat. <br>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
@@ -167,6 +167,47 @@
       </section>
       <!-- Tab END -->
     </main>
+
+    <!-- Footer BEGIN -->
+    <footer>
+      <section class="footer-top" role="region" aria-label="Social section">
+        <div class="container">
+          <div class="row">
+            <div class="col col-4">
+              <h5>About Velocity</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+            </div>
+            <div class="col col-4">
+              <h5>Useful links</h5>
+              <a href="#" class="footer-link" role="navigation">Phasellus gravida semper nisi</a>
+              <a href="#" class="footer-link" role="navigation">Suspendisse nisl elit</a>
+              <a href="#" class="footer-link" role="navigation">Dellentesque habitant morbi</a>
+              <a href="#" class="footer-link" role="navigation">Etiam sollicitudin ipsum</a>
+            </div>
+            <div class="col col-4">
+              <h5>Social</h5>
+              <div role="none">
+                <img src="img/social/twitter.svg" width="20" alt="Twitter Icon" class="icon" aria-label="Social Twitter Icon">
+                <a href="#" class="footer-link" role="link">Twitter</a>
+              </div>
+              <div role="none">
+                <img src="img/social/facebook.svg" width="20" alt="Facebook Icon" class="icon" aria-label="Social Facebook Icon">
+                <a href="#" class="footer-link" role="link">Facebook</a>
+              </div>
+              <div role="none">
+                <img src="img/social/pinterest.svg" width="20" alt="Pinterest Icon" class="icon" aria-label="Social Pinterest Icon">
+                <a href="#" class="footer-link" role="link">Pinterest</a>
+              </div>
+              <div role="none">
+                <img src="img/social/google.svg" width="20" alt="Google+ Icon" class="icon" aria-label="Social Google+ Icon">
+                <a href="#" class="footer-link" role="link">Google+</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- Footer END -->
 
     <!-- JAVASCRIPT FILES. -->
     <script src="js/hamburger.js"></script>

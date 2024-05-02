@@ -32,17 +32,20 @@ img {
   height: auto;
 }
 
-.btn {
-  display: inline-block;
-  margin: 0 10px;
-  padding: 10px 30px;
-  border-radius: 4px;
-  color: #ffffff;
-  line-height: 21px;
+/* --- Typography --- */
+h3 {
+  font-size: 20px;
+  line-height: 30px;
   font-weight: 300;
-  letter-spacing: 2px;
-  text-align: center;
+  letter-spacing: 7px;
   text-transform: uppercase;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
 }
 
 /* --- Layout. --- */
@@ -120,6 +123,72 @@ img {
   .col {
     width: 100%;
   }
+}
+
+/* --- Inner container. --- */
+.wrapper {
+  padding: 15px;
+  border: 1px solid #dcebf7;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+/* --- General button. --- */
+.btn {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 4px;
+  color: #ffffff;
+  line-height: 21px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* --- Sign Up button. --- */
+.btn-sign-up {
+  padding: 12px 30px;
+  background-color: #69b9ff;
+  transition: background-color 300ms ease;
+}
+
+.btn-sign-up:hover {
+  background-color: #2e9dff;
+}
+
+/* --- Learn More button. --- */
+.btn-learn-more {
+  border: 1px solid #ffffff;
+  transition: background-color 300ms ease,
+              border 300ms ease,
+              color 300ms ease;
+}
+
+.btn-learn-more:hover {
+  border-color: #2e9dff;
+  color: #2e9dff;
+}
+
+/* --- General titles. --- */
+.heading,
+.subheading {
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.heading {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+.subheading {
+  font-size: 18px;
+  letter-spacing: 3px;
 }
 
 /*==============================================================
@@ -278,7 +347,6 @@ img {
   color: #ffffff;
   font-size: 60px;
   line-height: 60px;
-  font-weight: 300;
   letter-spacing: 4px;
   text-transform: uppercase;
 }
@@ -288,31 +356,6 @@ img {
   color: #2e9dff;
   font-size: 25px;
   line-height: 25px;
-  font-weight: 300;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.banner .btn-sign-up {
-  padding: 12px 30px;
-  background-color: #69b9ff;
-  transition: background-color 300ms ease;
-}
-
-.banner .btn-sign-up:hover {
-  background-color: #2e9dff;
-}
-
-.banner .btn-learn-more {
-  border: 1px solid #ffffff;
-  transition: background-color 300ms ease,
-              border 300ms ease,
-              color 300ms ease;
-}
-
-.banner .btn-learn-more:hover {
-  border-color: #2e9dff;
-  color: #2e9dff;
 }
 
 /*==============================================================
@@ -324,49 +367,16 @@ img {
   text-align: center;
 }
 
-.offer .title-group {
+.offer .heading {
+  color: #676770;
+}
+
+.offer .subheading {
+  color: #8e8e9c;
   margin-bottom: 60px;
 }
 
-.title-group .heading,
-.title-group .subheading {
-  font-weight: 300;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.title-group .heading {
-  margin-top: 0;
-  margin-bottom: 16px;
-  color: #676770;
-  font-size: 30px;
-  text-align: center;
-  letter-spacing: 5px;
-}
-
-.title-group .subheading {
-  color: #8e8e9c;
-  font-size: 18px;
-  letter-spacing: 3px;
-}
-
-.offer .white-box {
-  padding: 15px;
-  border: 1px solid #dcebf7;
-  border-radius: 5px;
-  background-color: #ffffff;
-  text-align: center;
-  opacity: 1;
-  transform: translate3d(0px, 0px, 0px)
-             scale3d(1, 1, 1)
-             rotateX(0deg)
-             rotateY(0deg)
-             rotateZ(0deg)
-             skew(0deg, 0deg);
-  transform-style: preserve-3d;
-}
-
-.white-box img {
+.offer .wrapper img {
   display: block;
   width: 35%;
   margin: 20px auto;
@@ -377,18 +387,44 @@ img {
   box-shadow: 0 0 0 1px #2e9dff;
 }
 
-.white-box h3 {
+.offer .wrapper h3 {
   color: #676770;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 300;
-  letter-spacing: 7px;
-  text-transform: uppercase;
 }
 
-.white-box p {
-  margin: 10px 0;
-  font-size: 14px;
-  line-height: 25px;
-  font-weight: 300;
+/*==============================================================
+  # Services section.
+==============================================================*/
+.service {
+  padding: 80px 10px;
+  background-color: #192024;
+  text-align: center;
+}
+
+.service .heading,
+.service .subheading {
+  color: #ffffff;
+}
+
+.service .subheading {
+  margin-bottom: 50px;
+}
+
+.service .wrapper {
+  border-style: none;
+  background-color: transparent;
+}
+
+.service .wrapper img {
+  margin-bottom: 20px;
+}
+
+.service .wrapper h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.service .wrapper p {
+  margin-bottom: 20px;
+  color: #ffffff;
 }

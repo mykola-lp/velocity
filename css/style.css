@@ -33,6 +33,13 @@ img {
 }
 
 /* --- Typography --- */
+h2 {
+  margin: 10px 0;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 300;
+}
+
 h3 {
   font-size: 20px;
   line-height: 30px;
@@ -145,6 +152,7 @@ p {
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /* --- Sign Up button. --- */
@@ -169,6 +177,21 @@ p {
 .btn-learn-more:hover {
   border-color: #2e9dff;
   color: #2e9dff;
+}
+
+/* --- Tab button. --- */
+.btn-tab {
+  margin-right: 8px;
+  margin-left: 8px;
+  padding: 12px 30px;
+  background-color: #92a0ad;
+  transition: background-color 300ms ease;
+  font-size: 16px;
+}
+
+.btn-tab.active,
+.btn-tab:hover {
+  background-color: #2e80b6;
 }
 
 /* --- General titles. --- */
@@ -427,4 +450,40 @@ p {
 .service .wrapper p {
   margin-bottom: 20px;
   color: #ffffff;
+}
+
+/*==============================================================
+  # Tab's section.
+==============================================================*/
+.tab {
+  padding: 80px 10px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.tab .subheading {
+  margin-bottom: 50px;
+}
+
+.tab .tab-menu {
+  margin-bottom: 40px;
+}
+
+.tab-content .content-item {
+  display: none;
+}
+
+.tab-content .content-item.active {
+  display: block;
+}
+
+.content-item h2 {
+  color: #676770;
+}
+
+@media (max-width: 768px) {
+  .tab-menu .btn-tab {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 }

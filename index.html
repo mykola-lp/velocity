@@ -119,7 +119,7 @@
               </div>
             </div>
             <div class="col col-6">
-              <div class="wrapper">
+              <div class="wrapper" role="article" aria-label="Service details: SERVICES two">
                 <img src="img/service-2.jpg" alt="Service image two" aria-label="Service image two">
                 <h3>SERVICES two</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
@@ -130,9 +130,46 @@
         </div>
       </section>
       <!-- Services END -->
+
+      <!-- Tab BEGIN -->
+      <section class="tab">
+        <div class="container">
+          <h2 class="heading">Tab Section</h2>
+          <div class="subheading">
+            This is some text inside of a div block.
+          </div>
+          <div class="tab-menu" role="tablist">
+            <div class="btn btn-tab active" onclick="openTab('tab-1')">Tab 1</div>
+            <div class="btn btn-tab" onclick="openTab('tab-2')">Tab 2</div>
+            <div class="btn btn-tab" onclick="openTab('tab-3')">Tab 3</div>
+          </div>
+          <div class="tab-content">
+            <div id="tab-1" class="content-item active">
+              <img src="img/tab-1.jpeg" alt="Tab Image One">
+              <h2>Heading 1</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. <br>Duis cursus, mi quis viverra ornare,
+                eros dolor interdum nulla, ut commodo diam libero vitae erat. <br>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            </div>
+            <div id="tab-2" class="content-item">
+              <img src="img/tab-2.jpeg" alt="Tab Image Two">
+              <h2>Heading 2</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. <br>Duis cursus, mi quis viverra ornare, eros
+                dolor interdum nulla, ut commodo diam libero vitae erat.<br>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            </div>
+            <div id="tab-3" class="content-item">
+              <img src="img/tab-3.jpeg" alt="Tab Image Three">
+              <h2>Heading 3</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. <br>Duis cursus, mi quis viverra ornare, eros
+                dolor interdum nulla, ut commodo diam libero vitae erat. <br>Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tab END -->
     </main>
 
     <!-- JAVASCRIPT FILES. -->
     <script src="js/hamburger.js"></script>
+    <script src="js/tab.js"></script>
   </body>
 </html>
